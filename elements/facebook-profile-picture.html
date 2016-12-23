@@ -1,0 +1,41 @@
+<!-- 
+ELEMENT SETTINGS:
+
+fb-id: Put here the Facebook id of a customer and you get the profilepicture of the customer.
+
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="facebook-profile-picture">
+	
+	<style>
+    .panel {
+      padding: 10px;
+      max-width: 220px;
+    }
+
+    img {
+      width: 100%;
+    }
+	</style>
+
+	<template>
+
+    <div class="panel">
+      <img src='https://graph.facebook.com/v2.5/{{fbId}}/picture?type=large&redirect=true' alt="profielfoto">
+    </div>
+
+  </template>
+
+</dom-module>
+
+<script>
+	Polymer({
+		is: "facebook-profile-picture",
+
+    properties: {
+      fbId: String,
+    }
+	});
+</script>

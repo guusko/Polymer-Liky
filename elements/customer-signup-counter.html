@@ -1,0 +1,52 @@
+<!-- 
+ELEMENT SETTINGS:
+
+customer-signups: the amount of signups.
+
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="customer-signup-counter">
+	
+	<style>
+  
+    .counter-box {
+      width: 100%;
+      background-color: #2e928e;
+      border-radius: 6px;
+      padding: 10px;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+
+    .number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 58px;
+      line-height: 1;
+    }
+
+	</style>
+
+	<template>
+
+	   <div class="counter-box">
+      <div class="number">{{customerSignups}}</div>
+      <div class="text">Klanten aangemeld</div>
+     </div>
+
+  </template>
+
+</dom-module>
+
+<script>
+	Polymer({
+		is: "customer-signup-counter",
+
+    properties: {
+      customerSignups: String,
+    }
+	});
+</script>

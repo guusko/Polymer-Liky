@@ -1,0 +1,51 @@
+<!-- 
+ELEMENT SETTINGS:
+
+phone: This is the phone number displayed.
+email: This is the email address displayed.
+
+-->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="support-info-box">
+	
+	<style>
+    .contact-info {
+      list-style: none;
+    }
+
+    .contact-info a {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      color: #ffffff;
+      font-size: 18px;
+      display: block;
+    }
+
+    .contact-info i {
+      color: #b0d28e;
+      font-size: 18px;
+      padding-right: 6px;
+    }
+	</style>
+
+	<template>
+	 <li class="contact-info">
+      <a href="tel:{{phone}}"><i class="fa fa-phone"></i> {{phone}}</a>
+      <a href="{{supportUrl}}"><i class="fa fa-envelope"></i> {{email}}</a>
+    </li>
+  </template>
+
+</dom-module>
+
+<script>
+	Polymer({
+		is: "support-info-box",
+
+    properties: {
+      phone: String,
+      email: String,
+      supportUrl: String,
+    }
+	});
+</script>

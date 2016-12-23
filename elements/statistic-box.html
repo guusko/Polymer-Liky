@@ -1,0 +1,133 @@
+<!-- 
+ELEMENT SETTINGS:
+
+description: This is the description off the statistic
+value: This is a number for the statistic box 
+color: You can choose 4 colors: orange, green, blue or yellow 
+icon: You can choose 5 icons: thumbs-up, hand-up, file, users or facebook  
+
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="statistic-box">
+	
+	<style>
+
+		.symbol {
+			width: 40%;
+			padding:25px 15px;
+			border-radius: 4px 0px 0px 4px;
+			display: inline-block;
+			text-align: center;	
+		}
+
+		.symbol i {
+			color: #fff;
+    	font-size: 50px;
+		}
+
+		.value {
+			width: 58%;
+    	padding-top: 21px;
+    	float:right;
+    	text-transform: uppercase;
+    	text-align: center;
+		}
+
+		.value h1 {
+			font-weight: 300;
+			margin: 0;
+			padding:0;
+		}
+
+		.value p {
+			font-size: 13px;
+		}
+
+		#orange {
+			border: 1px solid #f39200;
+		}
+
+		#orange .symbol {
+			background-color: #f39200;
+		}
+
+		#green {
+			border: 1px solid #2e928e;
+		}
+
+		#green .symbol {
+			background-color: #2e928e;
+		}
+
+		#blue {
+			border: 1px solid #1a688c;
+		}
+
+		#blue .symbol {
+			background-color: #1a688c;
+		}
+
+		#yellow {
+			border: 1px solid #f8d347;
+		}
+
+		#yellow .symbol {
+			background-color: #f8d347;
+		}
+
+		#thumbs-up:before {
+    	content: "\f087";
+		}
+
+		#hand-up:before {
+    	content: "\f0a6";
+		}
+
+		#file:before {
+    	content: "\f0f6";
+		}
+
+		#users:before {
+    	content: "\f0c0";
+		}
+
+		#facebook:before {
+			content: "\f09a";
+		}
+
+	</style>
+
+	<template>
+		<section class="panel" id="{{color}}">
+      <div class="symbol">
+        <i class="fa" id="{{icon}}"></i>
+      </div>
+      <div class="value">
+        <h1>{{value}}</h1>
+        <p>{{description}}</p>
+      </div>
+    </section>
+  </template>
+
+</dom-module>
+
+<script>
+	Polymer({
+		is: "statistic-box",
+
+    properties: {
+      value: String,
+      description: String,
+      color: String,
+      icon: String,
+    },
+   
+	});
+</script>
+
+
+
+
+

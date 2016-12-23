@@ -1,0 +1,180 @@
+<!-- 
+ELEMENT SETTINGS:
+
+user-name: This is username of a Liky user.
+user-id: This is the user id of a Liky user.
+thumb-url: This is the url for the thumb in de menu.
+
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-dropdown/iron-dropdown.html">
+
+<dom-module id="liky-user-menu">
+	
+	<style>
+
+    ul {
+      margin: 0; 
+      padding-left: 0;
+      list-style: none;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+
+    a:active {
+      color:#666;
+    }
+
+    a:focus, a:hover {
+      color: transparent;
+    }
+
+    .dropdown-toggle {
+      padding: 6px;
+      border:1px solid #eee;
+      border-radius:4px;
+      background: none;
+    }
+
+    .dropdown-toggle {
+      display: block;
+    }
+
+    .user-tumb {
+      width: 29px;
+      vertical-align: middle;
+    }
+
+    .username {
+      color:#666;
+      font-size: 13px;
+      position: relative;
+      top:0px;
+    }
+
+    .caret {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 2px;
+      vertical-align: middle;
+      border-top: 4px solid #666;
+      border-right: 4px solid transparent;
+      border-left: 4px solid transparent;
+    }
+
+    .dropdown-menu {
+      width: 268px;
+      top:50px;
+      float: right;
+      right: 0;
+      left: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.176) !important;
+      padding: 0px;
+      border: none;  
+    }
+
+    .log-arrow-up {
+      background: url(../img/arrow-up.png) no-repeat;
+      width: 20px;
+      height: 11px;
+      position: absolute;
+      right: 20px;
+      top: -10px;
+    }
+
+    .profile-box, .settings-box {
+      width: 50%;
+      float: left;
+      text-align: center;
+    }
+
+    .profile-box a, .settings-box a {
+      color: #a4abbb;
+      border-bottom: none;
+      padding: 15px 10px !important;
+      width: 100%;
+      display: inline-block;
+      font-size: 12px;
+    }
+
+    .profile-box a i, .settings-box a i {
+      display: block;
+      font-size: 17px;
+    }
+
+    .profile-box a:hover, .settings-box a:hover {
+      background: none;
+    }
+
+    .profile-box a:hover i, .settings-box a:hover i {
+      color: #b0d28e;
+    }
+
+    .logout {
+      float: left;
+      text-align: center;
+      width: 100%;
+      background: #b0d28e;
+      border-radius: 0 0 3px 3px;
+    }
+
+    .logout a {
+      color: #fff;
+      border-bottom: none; 
+      padding: 15px 10px;
+      width: 100%;
+      display: inline-block;
+    }
+
+    .logout a:hover {
+      background: none;
+    }
+
+    .logout a i {
+      display: block;
+      font-size: 17px;
+    }
+    
+	</style>
+
+	<template>
+
+    <div> 
+      <ul>
+
+        <li class="dropdown">
+          <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <img class="user-tumb" alt="profile picture" src="{{tumbUrl}}">
+            <span class="username">{{userName}} ({{userId}})</span>
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu extended">
+            <div class="log-arrow-up"></div>
+            <li class="profile-box"><a href="#"><i class="fa fa-suitcase"></i> Profiel</a></li>
+            <li class="settings-box"><a href="#"><i class="fa fa-cog"></i> Instellingen</a></li>
+            <li class="logout"><a href="#"><i class="fa fa-key"></i> UITLOGGEN</a></li>
+          </ul>
+        </li>
+       
+      </ul>
+    </div>
+	      
+  </template>
+
+</dom-module>
+
+<script>
+	Polymer({
+		is: "liky-user-menu",
+
+    properties: {
+      userName: String,
+      userId: String,
+      tumbUrl: String,
+    }
+	});
+</script>

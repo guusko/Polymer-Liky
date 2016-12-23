@@ -1,0 +1,109 @@
+<!-- 
+ELEMENT SETTINGS:
+
+This element is using the element: <customer-table-row>
+
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../elements/customer-table-row.html">
+
+
+<dom-module id="top-customers-overview">
+	
+	<style>
+		.panel-heading {
+    	border-color: #eff2f7;
+    	font-size: 16px;
+    	font-weight: 400;
+    }
+
+    .table {
+    	display: table;
+    	border-collapse: collapse;
+      width: 100%;
+    }
+
+    .table-head {
+    	display: table-header-group;
+    }
+
+    .table-head .table-cell {
+    	vertical-align: bottom;
+    	border-bottom: 2px solid #ddd;
+    	font-weight: 600;
+    }
+
+    .total-likes,
+		.redeemed-likes,
+		.open-likes {
+			text-align: center;
+		}
+
+    .table-body {
+    	display: table-row-group;
+    }
+
+    customer-table-row {
+    	display: table-row;
+    }
+
+    customer-table-row:nth-of-type(odd) {
+    	background-color: #f9f9f9;
+		}
+
+    .table-cell {
+    	display: table-cell;
+    	padding:8px;
+    	line-height: 1.8;
+    }
+
+	</style>
+
+	<template>
+
+		<div class="panel">
+			<div class="panel-heading">
+				<span>Overzicht klanten</span>
+			</div>
+			<div class="panel-body">
+
+				<div class="table">
+					<div class="table-head">
+						<div class="table-cell number">Nr.</div>
+						<div class="table-cell name">Naam</div>
+						<div class="table-cell total-likes">Likes totaal</div>
+						<div class="table-cell redeemed-likes">Ingewisselde likes</div>
+						<div class="table-cell open-likes">Openstaande likes</div>
+					</div>
+					<div class="table-body">
+						<customer-table-row number="1" name="Bente van Leeuwenstijn" total-likes="39" redeemed-likes="0" open-likes="39"></customer-table-row>
+						<customer-table-row number="2" name="Roel Goemans" total-likes="38" redeemed-likes="0" open-likes="38"></customer-table-row>
+						<customer-table-row number="3" name="Mike van Beaumond" total-likes="38" redeemed-likes="0" open-likes="38"></customer-table-row>
+						<customer-table-row number="4" name="Emiel Kolk" total-likes="36" redeemed-likes="0" open-likes="36"></customer-table-row>
+						<customer-table-row number="5" name="Fulco de Nigtere" total-likes="35" redeemed-likes="0" open-likes="35"></customer-table-row>
+						<customer-table-row number="6" name="Niels Jansen" total-likes="30" redeemed-likes="0" open-likes="30"></customer-table-row>
+						<customer-table-row number="7" name="Carla Poel" total-likes="25" redeemed-likes="0" open-likes="25"></customer-table-row>
+						<customer-table-row number="8" name="Terence Vermeij" total-likes="23" redeemed-likes="0" open-likes="23"></customer-table-row>
+						<customer-table-row number="9" name="Ka Karin" total-likes="23" redeemed-likes="0" open-likes="23"></customer-table-row>
+						<customer-table-row number="10" name="Bjorn Rdrmond" total-likes="23" redeemed-likes="0" open-likes="23"></customer-table-row>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+  </template>
+
+</dom-module>
+
+<script>
+	Polymer({
+		is: "top-customers-overview",   
+	});
+</script>
+
+
+
+
+

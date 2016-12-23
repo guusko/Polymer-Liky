@@ -1,0 +1,123 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../elements/my-icons.html">
+<link rel="import" href="../elements/liky-menu.html">
+<link rel="import" href="../elements/liky-user-menu.html">
+<link rel="import" href="../elements/customer-signup-counter.html">
+<link rel="import" href="../elements/support-info-box.html">
+<link rel="import" href="../elements/statistic-box.html">
+<link rel="import" href="../elements/top-customers-overview.html">
+
+<dom-module id="liky-statistics">
+	
+	<style>
+
+    app-drawer {
+      --app-drawer-content-container: {
+        background-color: #1a688c;  
+      };
+
+      --app-drawer-width: 210px;
+      
+    }
+
+    app-header {
+      background-color: #fff;
+      --app-header-background-rear-layer: {
+        background-color: blue;
+      };
+    }
+
+    liky-menu {
+      margin-top: 50px;
+      display: block;
+    }
+
+    customer-signup-counter {
+      width: 80%;
+      margin-left: 10%;
+      display: block;
+      position: fixed;
+      bottom: 33%;
+    }
+
+    support-info-box {
+      position: fixed;
+      bottom: 20%;
+      width: 80%;
+      margin-left: 10%;
+    }
+
+    .logo {
+      width: 130px;
+    }
+
+    .content {
+      padding:15px;
+      background-color: #f1f2f7;
+      min-height: 900px;
+    }
+		
+	</style>
+
+	<template>
+			
+		<app-drawer-layout>
+
+      <app-drawer>
+        <liky-menu></liky-menu>
+        <customer-signup-counter customer-signups="11"></customer-signup-counter>
+        <support-info-box phone="030 20 80 998" email="support@liky.nl" support-url="#"></support-info-box>
+      </app-drawer>
+
+      <app-header-layout>
+
+        <app-header reveals fixed>
+          <app-toolbar>
+            <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+            <div main-title><img class="logo" src="../img/liky-logo.svg" alt="Liky Logo"></div>
+
+            <liky-user-menu user-name="Liky" user-id="1109" tumb-url="../img/user-tumb.png"><liky-user-menu>
+
+          </app-toolbar>
+        </app-header>
+
+        <div class="content">
+
+          <div class="row">
+           <statistic-box value="1792" description="Post likes totaal" color="orange" icon="thumbs-up" class="col-lg-4 col-sm-4"></statistic-box>
+           <statistic-box value="85453" description="Mensen bereikt totaal" color="green" icon="users" class="col-lg-4 col-sm-4"></statistic-box>
+           <statistic-box value="25" description="likes ingewisseld totaal" color="yellow" icon="hand-up" class="col-lg-4 col-sm-4"></statistic-box>
+          </div>
+
+          <div class="row">
+           <statistic-box value="46" description="Likes per post gemiddeld" color="orange" icon="thumbs-up" class="col-lg-4 col-sm-4"></statistic-box>
+           <statistic-box value="2192" description="Mensen gemiddeld bereikt" color="green" icon="users" class="col-lg-4 col-sm-4"></statistic-box>
+           <statistic-box value="813" description="Pagina likes" color="yellow" icon="facebook" class="col-lg-4 col-sm-4"></statistic-box>
+          </div>
+
+          <div class="row">
+            <top-customers-overview class="col-lg-12 col-sm-12"></top-customers-overview>
+          </div>
+
+        </div>
+
+      </app-header-layout>
+
+    </app-drawer-layout>
+
+	</template>
+
+</dom-module>
+
+<script>
+	Polymer({
+		is: "liky-statistics",
+	});
+</script>

@@ -1,0 +1,55 @@
+<!-- 
+ELEMENT SETTINGS:
+
+This element is using the element: <statistic-box>
+
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../elements/statistic-box.html">
+
+<dom-module id="customer-statistics-box">
+	
+	<style>
+
+		.panel-heading {
+    	border-color: #eff2f7;
+    	font-size: 16px;
+    	font-weight: 400;
+    }
+
+	</style>
+
+	<template>
+        <section class="panel">
+            <div class="panel-heading">
+                <span>Klant statistieken</span>
+            </div>
+            <div class="panel-body">
+
+                <div class="row">
+                   <div class="col-lg-12">
+                    <statistic-box value="5" description="likes ingewisseld" color="orange" icon="hand-up"></statistic-box>
+                </div>
+                <div class="col-lg-12">
+                    <statistic-box value="30" description="Totaal likes in periode" color="green" icon="thumbs-up"></statistic-box>
+                </div>
+                <div class="col-lg-12">
+                    <statistic-box value="39" description="Posts in periode" color="blue" icon="file"></statistic-box>
+                </div>
+            </div> 
+        </section>
+  </template>
+
+</dom-module>
+
+<script>
+	Polymer({
+		is: "customer-statistics-box",
+	});
+</script>
+
+
+
+
+

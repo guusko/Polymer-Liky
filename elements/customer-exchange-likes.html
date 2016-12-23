@@ -1,0 +1,153 @@
+<!-- 
+ELEMENT SETTINGS:
+
+openLikes: the amount of open likes for the customer.
+
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="customer-exchange-likes">
+	
+	<style>
+
+		.panel-heading {
+    	border-color: #eff2f7;
+    	font-size: 16px;
+    	font-weight: 400;
+    }
+
+		#spinner .input-left {
+	    float: left;
+	    width: 45%;
+	    height: 100px;
+	    text-align: center;
+	    font-size: 50px;
+		}
+
+		#spinner .divider-line {
+    	float: left;
+    	width: 10%;
+    	height: 100px;
+    	padding: 13px 0px;
+    	font-size: 50px;
+    	text-align: center;
+		}
+
+		#spinner .input-right {
+    	float: left;
+    	width: 45%;
+    	height: 100px;
+    	text-align: center;
+    	font-size: 50px;
+		}
+
+		#spinner .spinner-buttons {
+    	width: 100%;
+    	margin-top: 5%;
+    	float: left;
+		}
+
+		#spinner .btn-info {
+    	background-color: #2e928e;
+    	border-color: #2e928e;
+    	color: #FFFFFF;
+    	height:100px;
+    	width: 45%;
+    	border-radius:4px;
+  	}
+
+  	#spinner .btn-info:focus {
+  		border:none;
+  	}
+
+  	#spinner .spinner-up {
+  		margin-right: 10%;
+  	}
+
+  	#spinner .spinner-buttons i {
+    	font-size: 50px;
+		}
+
+		.redeem-button {
+    	float: left;
+    	margin-top: 20px;
+    	width: 100%;
+		}
+	
+		.redeem-button button {
+    	font-size: 40px;
+    	margin-bottom: 20px;
+    	background-color: #f39200;
+    	border: 1px solid #f39200;
+		}
+
+		.redeem-button button:hover {
+    	background-color: #f39c01;
+    	border: 1px solid #f39c01;
+		}
+
+	</style>
+
+	<template>
+
+		<div class="panel">
+			<div class="panel-heading">
+				<span>Openstaande likes inwisselen</span>
+			</div>
+			<div class="panel-body">
+
+				<div class="form-group">
+					
+					<div id="spinner">
+
+						<div class="input-group">
+							<input type="text" name="likes" class="spinner-input form-control input-left" maxlength="3" value="{{openLikes}}">
+							<span class="divider-line">/</span>
+							<input type="text" class="form-control input-right" value="{{openLikes}}" maxlength="3" readonly>
+						</div>
+
+						<div class="spinner-buttons input-group-btn">
+
+							<button type="button" class="btn btn-info spinner-up">
+								<i class="fa fa-angle-up"></i>
+							</button>
+
+							<button type="button" class="btn btn-info spinner-down">
+								<i class="fa fa-angle-down"></i>
+							</button>
+
+						</div>
+
+					</div>
+					
+					<div class="redeem-button">
+						<button type="submit" class="btn btn-success btn-lg btn-block">
+							INWISSELEN
+						</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+  </template>
+
+</dom-module>
+
+<script>
+	Polymer({
+		is: "customer-exchange-likes",
+
+    properties: {
+      openLikes: String,
+    },
+   
+	});
+</script>
+
+
+
+
+
+

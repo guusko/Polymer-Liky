@@ -1,0 +1,58 @@
+<!-- 
+ELEMENT SETTINGS:
+
+discount: This is the total amount of discount for the customer
+
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="discount-counter">
+	
+	<style>
+
+		.panel-heading {
+    	border-color: #eff2f7;
+    	font-size: 16px;
+    	font-weight: 400;
+    }
+
+    .subtotal {
+    	font-size: 52px;
+    	font-weight: 600;
+    	margin-bottom: 0px;
+    }
+ 
+	</style>
+
+	<template>
+
+		<div class="panel">
+			<div class="panel-heading">
+				<span>Kortingsbedrag</span>
+			</div>
+			<div class="panel-body">
+				<p class="subtotal">€{{discount}}</p>
+			</div>
+		</div>
+
+  </template>
+
+</dom-module>
+
+<script>
+	Polymer({
+		is: "discount-counter",
+
+    properties: {
+      discount: String,
+    },
+   
+	});
+</script>
+
+
+
+
+
+

@@ -1,0 +1,79 @@
+<!-- 
+ELEMENT SETTINGS:
+
+This is the overal menu for the Liky platform.
+
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="liky-menu">
+	
+	<style>
+		ul {
+      list-style: none;
+      padding: 0px;
+    }
+
+    li {
+      display: block;
+      margin: 0px 10px 5px 10px;
+    }
+
+    a {
+      display: block;
+      color:#fff;
+      text-decoration: none;
+      font-weight: 100;
+      text-transform: uppercase;
+      padding: 15px 0 15px 10px;
+    }
+
+    a:hover {
+      background-color: #2e928e;
+      border-radius:4px;
+      transition: all 0.3s ease;
+      color:#fff;
+      text-decoration: none;
+    }
+
+    a:hover i {
+      color: #b0d28e;
+    }
+
+    i {
+      padding-right:10px;
+    }
+
+	</style>
+
+	<template>
+	 <ul>
+    <li>
+      <a href="../index.html">
+        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+        <span>Inwisselen</span>
+      </a>
+    </li>
+    <li>
+      <a href="../statistieken.html">
+        <i class="fa fa-tachometer" aria-hidden="true"></i>
+        <span>Statistieken</span>
+      </a>
+    </li>
+    <li>
+      <a href="../statistieken.html">
+        <i class="fa fa-cog" aria-hidden="true"></i>
+        <span>Instellingen</span>
+      </a>
+    </li>
+   </ul>       
+  </template>
+
+</dom-module>
+
+<script>
+	Polymer({
+		is: "liky-menu",
+	});
+</script>

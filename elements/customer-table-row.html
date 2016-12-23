@@ -1,0 +1,64 @@
+<!-- 
+ELEMENT SETTINGS:
+
+number: This is the number for the row.
+name: This is the name for the row.
+total-likes: This number is the total likes for the customer.
+redeemed-likes: This number of likes the customer has redeemed 
+open-likes: This is the number of open likes for the customer
+
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="customer-table-row">
+	
+	<style>
+		.table-row {
+			display: table-row;
+			width: 100%;
+		}
+
+		.table-cell {
+			display: table-cell;
+			padding: 8px;
+			line-height: 1.8;
+		}
+
+		.total-likes,
+		.redeemed-likes,
+		.open-likes {
+			text-align: center;
+		}
+
+	</style>
+
+	<template>
+			<div class="table-cell number">{{number}}</div>
+			<div class="table-cell name">{{name}}</div>
+			<div class="table-cell total-likes">{{totalLikes}}</div>
+			<div class="table-cell redeemed-likes">{{redeemedLikes}}</div>
+			<div class="table-cell open-likes">{{openLikes}}</div>
+  </template>
+
+</dom-module>
+
+<script>
+	Polymer({
+		is: "customer-table-row",
+
+		properties: {
+			number: String,
+			name: String,
+			totalLikes: String,
+			redeemedLikes: String,
+      openLikes: String,
+    },
+
+	});
+</script>
+
+
+
+
+

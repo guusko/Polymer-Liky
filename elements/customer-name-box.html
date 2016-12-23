@@ -1,0 +1,48 @@
+<!-- 
+ELEMENT SETTINGS:
+
+name: The name of the customer
+
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="customer-name-box">
+	
+	<style>
+    .panel-heading {
+    	border-color: #eff2f7;
+    	font-size: 16px;
+    	font-weight: 400;
+    }
+
+    .name {
+    	font-weight: 500;
+    	font-size: 36px;
+    }
+	</style>
+
+	<template>
+
+	<div class="panel">
+    	<div class="panel-heading">
+            <span>Klant naam</span>
+        </div>
+    	<div class="panel-body">
+    		<span class="name">{{name}}</span>
+    	</div>
+    </div>
+
+  </template>
+
+</dom-module>
+
+<script>
+	Polymer({
+		is: "customer-name-box",
+
+        properties: {
+          name: String,
+        }
+	});
+</script>

@@ -1,0 +1,24 @@
+{
+  "name": "polymer",
+  "authors": [
+    "guusko <guus@guusko.nl>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.7.0",
+    "app-layout": "PolymerElements/app-layout#^0.10.6",
+    "paper-icon-button": "PolymerElements/paper-icon-button#^1.1.4",
+    "paper-toolbar": "PolymerElements/paper-toolbar#^1.1.7"
+  }
+}
